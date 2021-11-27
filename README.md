@@ -1,4 +1,5 @@
 # simplerecon
+Collects all subdomains of (multiple) root domains using a set of tools
 
 ## Install
 
@@ -15,8 +16,10 @@ which simplerecon
 ## Usage
 
 ```
-simplerecon <example.com> <N?>
-```
+simplerecon
 
-- Will scrap all subdomains from example.com by using amass, subfinder, sublist3r and assetfinder.
-- Will proceed to taking screenshots of all subdomains collected if N? option is not specified (default is screenshotting). If you don't want to take screenshots, use `simplerecon example.com N`.
+usage:
+--h|--help: print this message
+--domains: [required] list of root domains delimited by comma (example: --domains=example.com,example2.com)
+--eyewitness: [optional, default false] run eyewitness after collecting all subdomains
+```
