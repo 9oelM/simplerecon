@@ -1,25 +1,39 @@
 # simplerecon
 Collects all subdomains of (multiple) root domains using a set of tools
 
-## Install
-
 ```
-git clone thisrepository
+A part of
+      ___           ___           ___     
+     /\  \         /\  \         /\__\    
+    /::\  \        \:\  \       /::|  |   
+   /:/\:\  \        \:\  \     /:|:|  |   
+  /::\~\:\  \       /::\  \   /:/|:|__|__ 
+ /:/\:\ \:\__\     /:/\:\__\ /:/ |::::\__\
+ \/__\:\/:/  /    /:/  \/__/ \/__/~~/:/  /
+      \::/  /    /:/  /            /:/  / 
+      /:/  /     \/__/            /:/  /  
+     /:/  /                      /:/  /   
+     \/__/                       \/__/    
 
-npm run build:use
+scripts by @9oelm https://github.com/9oelM
 
-sudo ./install.sh
+atm-find-quick-subdomains.sh
 
-which simplerecon
-```
+quickly gathers subdomains of multiple root domains with multithreading
 
-## Usage
+IMPORTANT: 
+you need to install these tools in advance:
+- subfinder
+- assetfinder
+- sublist3r 
+- crobat
 
-```
-simplerecon
+example:
+atm-find-quick-subdomains.sh -t 15 -d hackerone,google.com,shopify.com
 
 usage:
---h|--help: print this message
---domains: [required] list of root domains delimited by comma (example: --domains=example.com,example2.com)
---eyewitness: [optional, default false] run eyewitness after collecting all subdomains
+-o [required] [string] path to output directory
+-d [required] [string] root domains to search subdomains for, delimited by comma
+                       example: -d "a.example.com,b.example.com"
+-t [optional] [int] number of threads (default: 5)
 ```
