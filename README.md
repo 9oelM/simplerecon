@@ -29,7 +29,7 @@ you need to install these tools in advance:
 - crobat
 
 example:
-atm-find-quick-subdomains.sh -t 15 -d hackerone,google.com,shopify.com
+atm-find-quick-subdomains.sh -t 15 -d hackerone,google.com,shopify.com -o output
 
 usage:
 -o [required] [string] path to output directory
